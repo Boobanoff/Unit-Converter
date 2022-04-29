@@ -4,14 +4,16 @@ body  {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(31, 41, 55);
-
 }
 
-
+.container {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
 
 #top-side {
-    background-image: linear-gradient(
-  45deg,
+    background-image: linear-gradient(45deg,
   hsl(240deg 100% 20%) 0%,
   hsl(234deg 100% 23%) 11%,
   hsl(228deg 100% 27%) 22%,
@@ -27,11 +29,13 @@ body  {
     box-sizing: border-box;
     margin: 0;
     text-align: center;
+    height: 30vh;
 }
 
 #bot-side {
     color: white;
     text-align: center;
+    height: 70vh;
 }
 
 #input-el {
