@@ -21,8 +21,18 @@ inputEl.addEventListener("input", function() {
     let imperialLresult = inputEl.value * imperialLratio
     let imperialVresult = inputEl.value * imperialVratio
     let imperialMresult = inputEl.value * imperialMratio
+
+    if (inputEl.value == "") {
+
+    Lresult.textContent = `0 meters = 0.000 feet | 0 feet = 0.000 meters`
+    Vresult.textContent = `0 liters = 0.000 gallons | 0 gallons = 0.000 liters`
+    Mresult.textContent = `0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos`
     
+}   else {
+
     Lresult.textContent = `${inputEl.value} meters = ${metricLresult.toFixed(3)} feet | ${inputEl.value} feet = ${imperialLresult.toFixed(3)} meters`
     Vresult.textContent = `${inputEl.value} liters = ${metricVresult.toFixed(3)} gallons | ${inputEl.value} gallons = ${imperialVresult.toFixed(3)} liters`
     Mresult.textContent = `${inputEl.value} kilos = ${metricMresult.toFixed(3)} pounds | ${inputEl.value} pounds = ${imperialMresult.toFixed(3)} kilos`
+    
+}
 })
